@@ -15,7 +15,7 @@ var formSubmitHandler = function(event) {
     getUserRepos(username);
 
     // clear old content
-    reporContainerEl.textContent = "";
+    repoContainerEl.textContent = "";
     nameInputEl.value = "";
   } else {
     alert("Please enter a GitHub username");
@@ -63,6 +63,7 @@ var displayRepos = function(repos, searchTerm) {
     var repoEl = document.createElement("a");
     repoEl.classList = "list-item flex-row justify-space-between align-center";
     repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
+    
     // create a span element to hold repository name
     var titleEl = document.createElement("span");
     titleEl.textContent = repoName;
